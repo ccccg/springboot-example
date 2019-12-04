@@ -15,7 +15,6 @@ public class CacheController {
 
     @GetMapping("testcache/{username}")
     public User testCache(@PathVariable("username") String username){
-        User user = userService.getUserByUsername(username);
-        return user;
+        return userService.getUserByUsername(username);
     }
 }
