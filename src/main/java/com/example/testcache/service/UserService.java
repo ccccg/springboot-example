@@ -5,13 +5,13 @@ import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-@CacheConfig(cacheNames = "emp")
+@CacheConfig(cacheNames = "user")
 @Service
 public class UserService {
     User user;
 
-    @Cacheable(cacheNames = {"user"})
-    public static User getUserByUsername(String username){
+    @Cacheable(cacheNames = "user")
+    public User getUserByUsername(String username){
         System.out.println("未启用缓存");
         User user = new User();
         user.setUsername(username);
