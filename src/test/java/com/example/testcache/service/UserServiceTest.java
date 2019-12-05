@@ -42,4 +42,9 @@ class UserServiceTest extends TestcacheApplicationTests {
         System.out.println(userService.getUserByUsername("qqq"));
 
     }
+    @Test
+    void clearUser(){
+        userService.clearUser("qqq");
+        System.out.println(userService.getUserByUsername("qqq"));
+    }
 }
