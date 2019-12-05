@@ -18,4 +18,11 @@ public class CacheController {
         User user = userService.getUserByUsername(username);
         return user;
     }
+
+    @GetMapping("updatecache/{username}")
+    public User updateCache(@PathVariable("username") String username){
+        User user = userService.getUserByUsername(username);
+        user = userService.updateUser(user);
+        return user;
+    }
 }
