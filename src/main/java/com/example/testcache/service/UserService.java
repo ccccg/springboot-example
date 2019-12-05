@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
     User user;
 
+
     @Cacheable(cacheNames = "user", key = "#username")
     public User getUserByUsername(String username){
         System.out.println("未启用缓存");
@@ -20,6 +21,9 @@ public class UserService {
         return user;
     }
 
+    //@CachePut 更新数据，并且更新key的缓存，cachemanager有许多cache
+    //cache里有许多key，缓存时要注意名称保持一致
+    //必须与@cacheable一起使用
     @CachePut(cacheNames = "user", key = "#user.username")
     public User updateUser(User user){
 
@@ -27,6 +31,4 @@ public class UserService {
         user.setPassword("xaaaa");
         return user;
     }
-
-
 }

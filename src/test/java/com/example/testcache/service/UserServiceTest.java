@@ -40,5 +40,6 @@ class UserServiceTest extends TestcacheApplicationTests {
 
         userService.updateUser(this.user);
         System.out.println(userService.getUserByUsername("qqq"));
+
     }
 }
