@@ -3,11 +3,9 @@ package com.example.testswagger.controller;
 import com.example.testswagger.model.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-<<<<<<< HEAD
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-=======
->>>>>>> origin/master
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -15,7 +13,7 @@ import java.util.ArrayList;
 @RestController
 @Api(tags = "用户相关接口", description = "提供用户相关的 Rest API")
 public class ApiController {
-    
+
     private static final Logger LOGGER = LoggerFactory.getLogger(ApiController.class);
 
     @PostMapping("/add")
